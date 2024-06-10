@@ -4,7 +4,7 @@ import { Cross1Icon } from '@radix-ui/react-icons'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { Drawer } from 'vaul'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/libs/cn'
 
 type ScreenDrawerProps = {
   className?: string
@@ -19,7 +19,11 @@ type ScreenDrawerProviderProps = {
   children: React.ReactNode
 }
 
-type ScreenDrawerContextType = { opened: boolean; open: () => void; close: () => void }
+type ScreenDrawerContextType = {
+  opened: boolean
+  open: () => void
+  close: () => void
+}
 const ScreenDrawerContext = createContext<ScreenDrawerContextType | undefined>(undefined)
 export const ScreenDrawerProvider = ({ children }: ScreenDrawerProviderProps) => {
   const [opened, setOpened] = useState(false)
