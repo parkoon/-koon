@@ -18,7 +18,7 @@ const Screen = ({ width = DEFAULT_SCREEN_WIDTH, className, children }: ScreenPro
       className={clsx('flex flex-col flex-1 min-h-full w-full mx-auto', className)}
       style={{ maxWidth: width, boxShadow: '-1px 0 0 0 #eee, 1px 0 0 0 #eee' }}
     >
-      {children}
+      <div className="px-5">{children}</div>
     </div>
   )
 }
