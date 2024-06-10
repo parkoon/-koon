@@ -3,6 +3,7 @@ import React from 'react'
 
 import '../src/styles/global.css'
 import Screen from '../src/ui/screen'
+import { ScreenDrawerProvider } from '../src/ui/screen-drawer'
 
 const preview: Preview = {
   parameters: {
@@ -17,7 +18,9 @@ const preview: Preview = {
     (Story, { parameters }) => {
       return (
         <Screen>
-          <Story />
+          <ScreenDrawerProvider>
+            <Story />
+          </ScreenDrawerProvider>
         </Screen>
       )
     },

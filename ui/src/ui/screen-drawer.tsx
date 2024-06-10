@@ -9,10 +9,7 @@ import { cn } from '@/libs/cn'
 type ScreenDrawerProps = {
   className?: string
   children?: React.ReactNode
-  open?: boolean
-  onClose?(): void
   title?: string
-  key?: string
 }
 
 type ScreenDrawerProviderProps = {
@@ -73,11 +70,11 @@ const ScreenDrawer = ({ className, title, children }: ScreenDrawerProps) => {
     <Drawer.Root dismissible={false} open={opened} noBodyStyles direction="right">
       <Drawer.Portal>
         <Drawer.Content
-          className={cn('fixed inset-x-0 bottom-0 z-50 mt-24 h-full bg-wht px-16 ', className)}
+          className={cn('fixed inset-x-0 bottom-0 z-50 mt-6 h-full bg-white px-4', className)}
         >
-          <div className="flex justify-between py-18">
+          <div className="flex justify-between py-4">
             <div />
-            <h2 className="text_18_b">{title}</h2>
+            <h2 className="text-lg">{title}</h2>
             <button onClick={close}>
               <Cross1Icon width={20} height={20} />
             </button>
