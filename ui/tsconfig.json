@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
+    "noEmit": false,
+    "outDir": "./dist",
+    "declaration": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -21,6 +23,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  // "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["./src/ui/**/*.tsx", "./src/ui/**/*.ts"],
   "exclude": ["node_modules"]
 }

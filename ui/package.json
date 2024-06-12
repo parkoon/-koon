@@ -1,14 +1,25 @@
 {
-  "name": "ui",
+  "name": "koonui",
+  "description": "Specialized Radix UI-based components optimized for mobile environments.",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "browser": "./browser/specific/main.js",
+  "keywords": [
+    "react",
+    "radix",
+    "component",
+    "mobile"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "rm -rf dist && mkdir dist && tsc"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.0.5",
